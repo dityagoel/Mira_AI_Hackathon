@@ -35,7 +35,6 @@ model:
 # Prompt template configuration
 prompt: |
   Take {gender},{history} and {age} from user, and provide data of vaccinations required at this age.
-  The advice should be good enough and the knowing the fact that the user is essentially a college going student, respective result should be provided.
   Treat yourself as a doctor, but don't express it in front of the user and provide necessary details.
 
 
