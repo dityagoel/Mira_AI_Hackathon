@@ -9,18 +9,7 @@ def load_yaml(file_path):
 def main():   
     st.markdown(
         """
-        <style>
-        .stApp {
-            background-color: #EDFFD5; /* App background */
-        }
-        
-        .stButton>button {
-            background-color: #502203; /* Change button color */
-            color: white;
-            border-radius: 10px;
-        }
-        
-        
+        <style>        
         .stTextInput>div>div>input {
         background-color: #FFFFFF !important;
         color: black !important;
