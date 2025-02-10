@@ -39,7 +39,7 @@ model:
 
 # Prompt template configuration
 prompt: |
-  Take {weight},{gender},{symptoms} and {age} from user, and find out the disease and give its medications and doses.
+  Take {age},{weight},{gender},and {symptoms} from user, and find out the disease and give its medications and doses.
   Find out data for general symptoms. If symptoms lead to a bigger disease, recommend the user to refer the doctor.
   Provide general medicines associated which is used by most people.
   Treat yourself as a doctor, but like if the issue seems grave, refer to offline visit with a doctor.
