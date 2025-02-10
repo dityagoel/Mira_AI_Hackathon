@@ -1,0 +1,44 @@
+# Version format ex. "0.0.1"
+version: "0.0.2"                            # Flow specification version
+
+# Basic metadata for the agent
+metadata:
+  name: "health-checkup-chatbot"                               # Unique identifier
+  description: "This bot will know symptoms and let you know abt any disease you're diagnosed with and tell you names of medicines along with their doses"       # Flow purpose
+  author: "dityagoel"                              # Must match your account username
+  tags: [health, fitness, advice, medical-history]                       # Keywords for categorization
+  private: false                                      # Access control setting
+
+# Define the input variables required
+inputs:
+  age:                                              # Second input parameter
+    type: string
+    description: "Age of patient is defined"
+    required: true
+    example: "18,19,20,21,22,etc."
+  gender:                                              # Second input parameter
+    type: string
+    description: "Gender of patient is defined"
+    required: true
+    example: "Male,Female"
+  history:                                              # Second input parameter
+    type: string
+    description: "Any medical history, if applicable, is mentioned here"
+    required: true
+    example: "diabetic, no medical history, etc."
+
+# LLM configuration
+model:
+  provider: "anthropic"                            # e.g., anthropic, openai, meta, etc.
+  name: "claude-3.5-sonnet"                                   # Specific model identifier
+
+# Prompt template configuration
+prompt: |
+  Take {gender},{history} and {age} from user, and provide data of vaccinations required at this age.
+  The advice should be good enough and the knowing the fact that the user is essentially a college going student, respective result should be provided.
+  Treat yourself as a doctor, but don't express it in front of the user and provide necessary details.
+
+
+# ReadME configuration
+readme: |
+  This will provide you a list of vaccinations for a person of a particular age group,gender and medical history.
