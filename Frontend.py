@@ -1,7 +1,12 @@
+import yaml
 import streamlit as st
 from mira_sdk import MiraClient,Flow
 
-def main():
+def load_yaml(file_path):
+    with open(file_path, "r") as file:
+        return yaml.safe_load(file)
+
+def main():   
     st.markdown(
         """
         <style>
@@ -62,7 +67,8 @@ def main():
     choice = st.selectbox('Which issue would you like me to assist you with?',["Self-Checkup", "Fitness Advice", "Vaccinations for you"])
 
     if choice == "Self-Checkup":
-        flow = Flow(source="test_flow.yaml")  # Load flow configuration
+        config = load_yaml("test_flow.yaml")
+        flow = Flow(source=config)  # Load flow configuration
         input_dict = {}  # Prepare test input
         st.markdown("<p style='font-size:20px;'> Enter details for Self Checkup: </p>", unsafe_allow_html=True)
         st.markdown("<p style='font-size:18px;'> Note: This is a general health checkup bot, for minor issues. </p>", unsafe_allow_html=True)
