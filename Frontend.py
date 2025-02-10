@@ -7,24 +7,6 @@ def load_yaml(file_path):
         return yaml.safe_load(file)
 
 def main():   
-    st.markdown(
-        """
-        <style>        
-        .stTextInput>div>div>input {
-        background-color: #FFFFFF !important;
-        color: black !important;
-        padding: 10px !important;
-        }
-
-        .stTextArea>div>div>textarea {
-        background-color: #FFFFFF !important;
-        color: black !important;
-        padding: 10px !important;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
     st.title("BEWELLBOT :herb:")
     Markdown= '''
     ## Health bot at your rescue! :wink:
