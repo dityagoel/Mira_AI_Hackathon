@@ -1,4 +1,3 @@
 streamlit
-MiraClient
-Flow
+mira-sdk
 pyyaml
