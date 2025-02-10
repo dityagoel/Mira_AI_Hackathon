@@ -40,7 +40,7 @@ model:
 # Prompt template configuration
 prompt: |
   Take {age},{weight},{gender} and {history} from user, and provide fitness advice.
-  The advice should be good enough and the knowing the fact that the user is essentially a college going student, respective advice should be provided.
+  The advice should be good enough.
   Treat yourself as a fitness expert and provide necessary advice.
 
 
