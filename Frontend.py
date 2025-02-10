@@ -86,7 +86,8 @@ def main():
 
 
     elif choice == "Fitness Advice":
-        flow = Flow(source="test_flow_2.yaml")  # Load flow configuration
+        config2 = load_yaml("test_flow_2.yaml")
+        flow = Flow(source=config2)  # Load flow configuration
         input_dict = {}  # Prepare test input
         st.markdown("<p style='font-size:20px;'> Enter details for Fitness Advice: </p>", unsafe_allow_html=True)
         age = st.text_input("Enter age:")
@@ -102,7 +103,8 @@ def main():
             st.text_area("Result:",response['result'],height=500)
 
     elif choice == "Vaccinations for you":
-        flow = Flow(source="test_flow_3.yaml")  # Load flow configuration
+        config3 = load_yaml("test_flow_3.yaml")
+        flow = Flow(source=config3)  # Load flow configuration
         input_dict = {}  # Prepare test input
         st.markdown("<p style='font-size:20px;'> Enter details to find list of vaccinations: </p>", unsafe_allow_html=True)
         age = st.text_input("Enter age:")
